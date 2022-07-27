@@ -13,16 +13,30 @@
 			pulaLinha();
 		}
 		function calculaImc(peso, altura){
-			var imc = peso / (altura * altura);
-			return imc;
+			return peso / (altura * altura);
+			
 		}
 
-		
-		var imcLeo = calculaImc(85, 1.75);
-		var imcAmigo = calculaImc(68, 1.72);
+		var nome = prompt("Qual é seu nome?");
+		var altura = prompt(nome + " informe sua altura: ");
+		var peso = prompt(nome + " informe o seu peso: ");
+		var totalImc = calculaImc(peso, altura);
+		var total = totalImc;
+		var menorImc = 18.5;
+		var maiorImc = 35;
 
-		mostra(imcLeo);
-		mostra(imcAmigo);
+		mostra("O imc de " + nome + " é: " + total);
+
+		if(total <= menorImc){
+			mostra("Abaixo do peso normal.");
+
+		}else if(total >= maiorImc){
+			mostra("Obesidade classe um.");
+
+		}else {
+			mostra("Peso normal.");
+		}
+
 	</script>
 
 </head>
