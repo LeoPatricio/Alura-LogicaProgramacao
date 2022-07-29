@@ -14,24 +14,24 @@
 
         while(tentativaAtual <= maximoTentativas) {
 
-        var loginInformado = prompt("Informe seu login");
-        var senhaInformada = prompt("Informe sua senha");
+            var loginInformado = prompt("Informe seu login");
+            var senhaInformada = prompt("Informe sua senha");
 
-        if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+            if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
 
-            alert("Bem-vindo ao sistema, " + loginInformado);
+                alert("Bem-vindo ao sistema, " + loginInformado);
 
-            tentativaAtual = maximoTentativas; 
-        } else {
-
-            if (tentativaAtual == 3) {
-                alert("Número permitido de tentativas ultrapassado!");
+                tentativaAtual = maximoTentativas; 
             } else {
-                alert("Login inválido. Tente novamente");
-            }
-        }
 
-        tentativaAtual++;
+                if (tentativaAtual == 3) {
+                    alert("Número permitido de tentativas ultrapassado!");
+                } else {
+                    alert("Login inválido. Tente novamente");
+                }
+            }
+
+            tentativaAtual++;
         }
     </script>
 
