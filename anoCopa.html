@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Anos copas!</title>
+
+	<script>
+		function pulaLinha() {
+			document.write("<br>");
+			document.write("<br>");
+		}
+		function mostra(texto) {
+			document.write(texto);
+			pulaLinha();
+		}
+
+		var anoDesejado = parseInt(prompt("Em que anos estamos?"));
+		var anoCopa = 1930;
+		var qtdCopas = 0;
+		
+		while (anoCopa < anoDesejado) {
+
+			anoCopa += 4;
+			qtdCopas += 1;
+
+			if(anoCopa == 1942){
+				mostra("Em 1942, por conta da segunda guerra mundial, não tivemos copa.");
+			}else if(anoCopa == 1946){
+				mostra("Em 1946, por conta da segunda guerra mundial, não tivemos copa.");
+			}else {
+				mostra("Teve copa em: " + anoCopa);
+			}
+		}
+
+		qtdCopas = qtdCopas - 2;
+		mostra("Até o ano de " + anoCopa + " tivemos: " + qtdCopas + " copas do mundo!");
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
