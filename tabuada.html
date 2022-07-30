@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tabuada!</title>
+	<script>
+
+		function pulaLinha() {
+
+			document.write("<br>");
+			document.write("<br>");
+		}
+
+		function mostra(texto) {
+
+			document.write(texto);
+			pulaLinha();
+		}
+
+
+		
+		var numEscolhido = parseInt(prompt("Qual numero deseja saber a tabuada?"));
+		var numMultiplicador = parseInt(prompt("Você quer a tabuada até qual numero?"));
+
+		for(var multiplicador = 1; multiplicador <= numMultiplicador; multiplicador++){
+			var calculo = numEscolhido * multiplicador;
+			mostra(numEscolhido + " x " + " " + multiplicador + " = " + calculo);
+			
+		}
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
