@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Adivinha mais!</title>
+	<input/>
+	<button>Compare com o meu segredo!</button>
+
+	<script>
+		var segredo = Math.round(Math.random() * 10);
+
+		var input = document.querySelector("input");
+		input.focus();
+
+		function verificar(){ 
+
+			if(input.value == segredo){
+				alert("Você acertou!");
+			}else {
+				alert("Você errou!");
+
+			}
+			input.value = "";
+			input.focus();
+		}
+
+		var button = document.querySelector("button");
+		button.onclick = verificar;
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

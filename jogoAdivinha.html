@@ -19,17 +19,23 @@
 			return Math.round(Math.random() * n);
 		}    
 		
-
+		var chances = 3;
 		var numPensado = numeroRandom(10);
-		var chute = parseInt(prompt("Escreve seu chute: "));
-		if(chute == numPensado) {
 
-			mostra("Parabéns, você acertou!");
+		while(chances > 0){
 
-		}else{
-			mostra("Poxa, você errou, o número pensado foi: " + numPensado);
+			var chute = parseInt(prompt("Escreve seu chute: "));
+			if(chute == numPensado) {
+
+				mostra("Parabéns, você acertou! O número pensado foi: " + numPensado);
+				break;
+
+			}else{
+				mostra("Poxa, não foi dessa vez, mas não desista! :D ");
+			}
+
+			chances--;
 		}
-
 
 
 	</script>
